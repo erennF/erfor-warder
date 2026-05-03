@@ -1,42 +1,16 @@
-# 🏗️ ERFOR WARDER Web Projesi
+# React + Vite
 
-Bu proje, **ERFOR Lojistik** şirketi için geliştirilmiş, yüksek performanslı ve modern bir kurumsal web sitesidir. Site, kullanıcı deneyimini ön planda tutan responsive bir yapıya ve profesyonel bir tasarıma sahiptir.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Öne Çıkan Özellikler
-*   **Tam Responsive Tasarım:** Tüm mobil ve masaüstü cihazlarla %100 uyumlu arayüz.
-*   **Çok Dilli Destek:** Global erişim için Türkçe ve İngilizce dil seçenekleri.
-*   **Yüksek Performans:** Vite altyapısı sayesinde hızlı yükleme süreleri ve optimize edilmiş görseller.
-*   **Modern UI/UX:** Tailwind CSS ile oluşturulmuş estetik bileşenler, Hero slider animasyonları ve scroll-tabanlı etkileşimler.
+Currently, two official plugins are available:
 
-## 🛠️ Teknoloji Yığını
-*   **Frontend:** React, Vite.
-*   **Styling:** Tailwind CSS.
-*   **Yönetim:** npm.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 📁 Dosya Yapısı
-Proje klasör yapısı şu şekildedir:
-*   `src/`: Tüm React bileşenleri ve mantıksal katmanlar.
-*   `assets/`: Şirket logoları ve sektörel görseller.
-*   `index.css`: Tailwind tabanlı global stil tanımlamaları.
-*   `package.json`: Proje bağımlılıkları ve çalışma komutları.
+## React Compiler
 
-## 💻 Kurulum ve Çalıştırma
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1. **Bağımlılıkları Yükleyin:**
-   ```bash
-   npm install```
+## Expanding the ESLint configuration
 
-2. **Geliştirme Sunucusunu Başlatın:**
-   ```npm run dev```
-
-3. **Tarayıcıda Görüntüleyin:**
-  Genellikle http://localhost:5173 adresinde çalışacaktır.
-
-## 🔗 Canlı Önizleme
-Projeyi tarayıcıda canlı olarak incelemek için aşağıdaki bağlantıyı kullanabilirsiniz:
-👉 (https://erforwarder.com/)
-
-## 📬 İletişim
-Bu proje Firdevs Eren tarafından geliştirilmiştir. Proje hakkında daha fazla bilgi almak veya iş birliği için lütfen iletişime geçin.
-   
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

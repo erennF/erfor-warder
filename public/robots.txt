@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemapi belirt
+Sitemap: https://erforwarder.com/sitemap.xml
+
+# Crawl delay (opsiyonel - yoğun crawling'i önle)
+Crawl-delay: 1
+
+# Disallow specific paths if needed
+# Disallow: /admin
+# Disallow: /private

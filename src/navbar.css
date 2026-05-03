@@ -1,0 +1,203 @@
+/* --- ANA KONTEYNER --- */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box; 
+  z-index: 1000; 
+  background-color: rgba(5, 5, 5, 0.85); 
+  border-bottom: 1px solid rgba(196, 176, 135, 0.1); 
+  backdrop-filter: blur(10px);
+}
+
+/* --- LOGO --- */
+.logo-area {
+  flex-shrink: 0;
+}
+
+.company-logo {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* --- NAVİGASYON LİNKLERİ --- */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #c4b087;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
+}
+
+.nav-link.active { color: #fce29f; }
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; width: 100%; height: 2px;
+  background-color: #fce29f;
+ box-shadow: 0 0 8px #fce29f, 
+              0 0 15px #fce29f, 
+              0 0 25px rgba(252, 226, 159, 0.6);
+  border-radius: 2px; 
+}
+
+/* --- TR - EN - TEL --- */
+.right-actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Sağa tam yaslanması için */
+  gap: 15px; /* İkonlar arası boşluk */
+  margin-left: auto; 
+  flex-wrap: nowrap; 
+}
+
+/* Yuvarlak Buton Ortak Stili */
+.lang-circle-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #c4b087;
+  border-radius: 50%;
+  background: transparent;
+  color: #c4b087;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  overflow: hidden; 
+  position: relative;
+}
+
+.flag-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tr-flag-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flag-svg.gold-stroke {
+  color: #c4b087;
+}
+
+.lang-circle-btn:hover {
+  background-color: rgba(196, 176, 135, 0.1);
+  box-shadow: 0 0 10px rgba(196, 176, 135, 0.4);
+}
+
+.lang-circle-btn.active {
+  border-color: #fce29f;
+  box-shadow: 0 0 15px rgba(252, 226, 159, 0.5);
+}
+
+.lang-circle-btn.active .flag-svg.gold-stroke .flag-svg{
+  color: #fce29f;
+}
+.phone-btn .flag-svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* --- TELEFON DROPDOWN --- */
+.phone-menu-container { 
+  position: relative; 
+}
+
+.phone-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0; /* Menü sağa yaslı açılır */
+  background-color: #0a0a0a;
+  border: 1px solid #c4b087;
+  border-radius: 8px;
+  min-width: 190px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-link {
+  padding: 12px;
+  color: #c4b087;
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phone-link:hover { 
+  background: rgba(196, 176, 135, 0.1); 
+  color: #fce29f;
+ }
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #c4b087;
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-container { padding: 10px 20px; }
+  
+  /* Mobilde navigasyonu gizle Hamburger ile aç */
+  .nav-menu {
+    position: fixed;
+    top: 0; right: -100%; left: auto;
+    width: 280px; height: 100vh;
+    background: #050505;
+    flex-direction: column;
+    padding: 100px 30px;
+    transition: 0.4s;
+    transform: none; 
+    z-index: 9999;   
+    display: flex;
+    gap: 35px;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.8);
+  }
+
+  .nav-menu.mobile-open { right: 0; left: auto;}
+  
+  .hamburger-btn { 
+    display: block;
+     order: 3; 
+    } 
+  .right-actions-container { 
+    order: 2; 
+    margin-left: auto;
+   } 
+  .logo-area { order: 1; } 
+  .company-logo { height: 60px; }
+  .lang-circle-btn { width: 32px; height: 32px; }
+}
